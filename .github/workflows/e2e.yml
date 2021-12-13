@@ -24,6 +24,7 @@ jobs:
 
     - name: Set environment variables
       run: |
+        cd ../
         echo "CSI_BAREMETAL_DIR=`pwd`/csi-baremetal/" >> $GITHUB_ENV
         echo "CSI_BAREMETAL_OPERATOR_DIR=`pwd`/csi-baremetal-operator/" >> $GITHUB_ENV
 
