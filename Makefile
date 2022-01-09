@@ -79,7 +79,8 @@ install-protoc:
 	mkdir -p proto_3.11.0
 	curl -L -O https://github.com/protocolbuffers/protobuf/releases/download/v3.11.0/protoc-3.11.0-linux-x86_64.zip && \
 	unzip protoc-3.11.0-linux-x86_64.zip -d proto_3.11.0/ && \
-	sudo mv proto_3.11.0/bin/protoc /usr/bin/protoc && \
+	
+	mv proto_3.11.0/bin/protoc /usr/bin/protoc && \
 	protoc --version; rm -rf proto_3.11.0; rm protoc-*
 	go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.2
 
